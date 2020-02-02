@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>College</title>
+
+<style>
+    header{ 
+       
+        margin: 0px;
+        border: 0px;
+        background-color:orange;
+        border: 5px solid blue;
+        border-radius: 10px;
+        
+        
+    }
+    h2{
+        margin:0px;
+        border: 0px;
+
+    }
+    footer
+    {
+        background-color: rgb(9, 9, 85);
+        text-align: center;
+        height:50px;
+        color: beige;
+        border-radius:10px;
+
+    }
+    body{
+        margin: 0px;
+        border:0px;
+        text-align: center;
+        
+
+       
+    }
+    input[type=text]:hover
+    {
+        font-size: 20px;
+    }
+input[type=submit]
+    {
+        color:white;
+        background-color: rgb(17, 8, 151);
+        border-radius: 2px;
+        text-align: center;
+        
+    }
+    input[type=submit]:hover
+    {
+        background-color:green;
+        
+    }
+    form
+    {
+        background-color: rgb(230, 159, 29);
+        margin: 0px;
+        border: 0px;
+    }
+    #sucess
+    {
+        color:green;
+       
+
+    }
+</style>
+<body>
+    
+    <header> 
+        <h2>Annamachrya institute of Technology and Science,<h3>Tirupati</h3></h2>
+    </header>
+    <!--nav>
+        <ul>
+            <li>home </li>
+            <li>home </li>
+            <li>home </li>
+            <li>home </li>
+            <li>home </li>
+            <li>home </li>
+        </ul>
+    <--nav-->
+    <form action="submit"  method="POST">
+    
+    {% csrf_token %}
+    {% for message in messages%}
+    <h3 id="sucess">{{message}}</h3>
+    {% endfor%}
+    <h3>Which Department:</h3>
+    <br>
+    <!--<input type="text" name="department" >-->
+
+   <select name="department">
+       <option selected >
+           CSE
+       </option>
+       <option>
+        ECE
+    </option>
+    <option>
+        EEE
+    </option>
+    <option>
+        MECT
+    </option>
+    <option>
+        CIVEL
+    </option>
+    <option>
+        M.TECT
+    </option>
+   </select>
+   <h4>Name:</h4>
+   <input type="text" name="name" >
+   <h4>Roll No:</h4>
+   <input type="text" name="roll_no" maxlength="10">
+   <h4>Section:</h4>
+   <!--<input type="text" name="section" title="only numarical number" maxlength="1">-->
+   <select name="section">
+       <option selected>
+           1
+       </option>
+       <option>
+        2
+    </option><option>
+        3
+    </option>
+   </select>
+   <h3>Game:</h3>
+   <!--<input type="text" name="game" >-->
+   <select name="game">
+    <option selected>
+        select game
+    </option>
+       <option>
+        cricket
+       </option>
+       <option>
+        kho kho
+    </option>
+    <option>
+        Blind coding
+    </option>
+    <option>
+        Code war 
+    </option>
+    <option>
+        ppt
+    </option>
+    <option>
+        Code charades
+    </option>
+    <option>
+        JAM
+    </option><option>
+       Photography
+    </option><option>
+        Dips karo
+    </option><option>
+        Fastest finger
+    </option>
+    <option>
+        Chess
+    </option><option>
+        Table tennis
+    </option><option>
+        Throw ball
+    </option><option>
+        Code charades
+    </option>
+    <option>
+        Super six
+    </option>
+    </select>
+    <br><br>
+
+   <input type="submit" value="Submit"><br><br>
+</form>    
+    <footer>Copy right &copf; receved 2020<br>
+    Designed by M.Mahammad jebibulla.</footer>
+</body>
+</html>
